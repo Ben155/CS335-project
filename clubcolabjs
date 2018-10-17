@@ -1,0 +1,162 @@
+    window.onload = function(){
+    
+        var all = document.getElementsByTagName("td");
+        for (var i=0;i<all.length;i++) {
+            all[i].onclick = inputClickHandler;       
+        }
+    };
+    
+    function inputClickHandler(e){
+        e = e||window.event;
+        var tdElm = e.target||e.srcElement;
+        if(tdElm.style.backgroundColor == 'rgb(255, 0, 0)'){
+            tdElm.style.backgroundColor = '#e8e8e8';
+        } else {
+            tdElm.style.backgroundColor = '#f00';
+        }
+    }
+
+
+
+var clubsAndSocs =
+{
+Access : "Access",
+Africa : "Africa",
+AIESEC : "AIESEC",
+Aikido : "Aikido",
+Airsoft : "Airsoft",
+AmericanFootball : "AmericanFootball",
+Anthropology : "Anthropology",
+Aquatics : "Aquatics",
+Archery : "Archery",
+Arts_Crafts_and_Design : "Arts Crafts and Design",
+Astro_2 : "Astro 2",
+Athletics : "Athletics",
+Australian_Rules : "AustralianRules",
+Badminton : "Badminton",
+Basketball : "Basketball",
+Biology : "Biology",
+BLW_Campus_Ministry : "BLW Campus Ministry",
+Bosco : "Bosco",
+Boxing : "Boxing",
+Business : "Business",
+Busking : "Busking",
+Camogie : "Camogie",
+Cancer : "Cancer",
+Cards : "Cards",
+Celtic_Studies : "Celtic Studies",
+Chemistry : "Chemistry",
+Chess : "Chess",
+Chinese : "Chinese",
+Christian_Union : "Christian Union",
+Circus : "Circus",
+Common_Grounds : "Common Grounds",
+Creative_Writing : "Creative Writing",
+Cuallacht_na_Gaeilge : "Cuallacht na Gaeilge",
+Dance : "Dance",
+Debating : "Debating",
+Design_Lab : "Design Lab",
+Deukuma : "Deukuma",
+Disney : "Disney",
+DJ : "DJ",
+Drama : "Drama",
+Education : "Education",
+Electronics_Eng : "Electronics Eng",
+ELSA : "ELSA",
+Enactus : "Enactus",
+Environment_Society : "Environment Society",
+Equestrian : "Equestrian",
+Fianna_Fail : "Fianna Fáil",
+Feminist : "Feminist",
+Fencing : "Fencing",
+Finomics : "Finomics",
+FLAC : "FLAC",
+Football : "Football",
+Football : "Football",
+French : "French",
+Froebel : "Froebel",
+GAA : "GAA",
+Gaeilge : "Gaeilge",
+Gaisce : "Gaisce",
+Galway_Cycle : "Galway Cycle",
+Game_of_Thrones : "Game of Thrones",
+Games : "Games",
+Geography : "Geography",
+Golf : "Golf",
+GradSoc : "GradSoc",
+Handball : "Handball",
+History : "History",
+Hockey : "Hockey",
+Hogwarts : "Hogwarts",
+Hurling : "Hurling",
+IESN : "IESN",
+Islamic : "Islamic",
+Israel : "Israel",
+Japanese_Culture : "Japanese Culture",
+Judo : "Judo",
+Kenpo_Karate : "KenpoKarate",
+Kickboxing : "Kickboxing",
+Labour : "Labour",
+Ladies_GAA : "LadiesGAA",
+Ladies_Soccer : "LadiesSoccer",
+Languages : "Languages",
+Law : "Law",
+Legion_of_Mary : "Legion of Mary",
+Literary_and_Debating : "Literary and Debating",
+MarsFM : "MarsFM",
+Mary : "Mary",
+Maths : "Maths",
+Mature : "Mature",
+Media : "Media",
+Mens : "Mens",
+MensSoccer : "MensSoccer",
+Mental_Health : "Mental Health",
+Ministry : "Ministry",
+Mountaineering : "Mountaineering",
+Movement : "Movement",
+MUCK : "MUCK",
+Music : "Music",
+Musical : "Musical",
+Ogra_Fianna_Fail : "Ogra Fianna Fail",
+Olympic_Handball : "OlympicHandball",
+Omega : "Omega",
+People_Before_Profit : "People Before Profit",
+Pokemon : "Pokemon",
+Politics_and_Sociology : "Politics and Sociology",
+Pride : "Pride",
+Pro_Choice : "Pro Choice",
+Pro_Life : "Pro Life",
+Profit : "Profit",
+Psychology : "Psychology",
+Red_Cross : "Red Cross",
+Rovers : "Rovers",
+Rowing : "Rowing",
+Rugby : "Rugby",
+Shotokan_Karate : "ShotokanKarate",
+Sinn_Fein : "Sinn Féin",
+Snooker : "Snooker",
+Snowsports : "Snowsports",
+Socialist_Party : "Socialist Party",
+Socit : "Socit",
+St_Catherines : "St Catherines",
+Strength_And_Fitness : "Strength And Fitness",
+Surf : "Surf",
+SVP : "SVP",
+TaekwonDo : "TaekwonDo",
+Tea : "Tea",
+The_Purpose_Movement : "The Purpose Movement",
+Thrones : "Thrones",
+Trad_Music : "Trad Music",
+Trampoline : "Trampoline",
+Ultimate_Frisbee : "UltimateFrisbee",
+Volleyball : "Volleyball",
+Yoga : "Yoga",
+Young_Fine_Gael : "Young Fine Gael"
+}
+
+
+Array.from(document.getElementsByTagName('select')).forEach(function(selectElem) {
+  for (let i in clubsAndSocs) {
+    selectElem.options[selectElem.options.length] = new Option(clubsAndSocs[i], i);
+  }
+});
