@@ -1,70 +1,3 @@
-       // window.onload = function() {
-
-    //   var all = document.getElementsByTagName("td");
-    //   for (var i = 5; i < all.length; i++) {
-    //     all[i].onclick = inputClickHandler;
-    //   }
-    // };
-
-    // function inputClickHandler(e) {
-    //   e = e || window.event;
-    //   var tdElm = e.target || e.srcElement;
-    //   if (tdElm.style.backgroundColor === "white")  
-    //   {
-    //     tdElm.style.backgroundColor = "red";
-    //   } else if (tdElm.style.backgroundColor === "red") 
-    //   {
-    //     tdElm.style.backgroundColor = "white";
-    //   }
-    // }
-
-
-
-    // window.onkeyup = function() {
-
-    //   var all = document.getElementsByTagName("td");
-    //   for (var i = 5; i < all.length; i++) {
-    //     all[i].onclick = inputClickHandler;
-    //   }
-    // };
-
-    // function inputClickHandler(e) {
-    //   e = e || window.event;
-    //   var tdElm = e.target || e.srcElement;
-    //   console.log(tdElm);
-    //   if (tdElm.style.backgroundColor === "#F0F3F4")  
-    //   {
-    //     console.log(tdElm);
-    //     tdElm.style.backgroundColor = "red";
-    //   } else if (tdElm.style.backgroundColor === "red") 
-    //   {
-    //     tdElm.style.backgroundColor = "#F0F3F4";
-    //   }
-    // }
-// if (tdElm.style.backgroundColor ==="red")
-//       {
-//             //tdElm.innerHTML = "Clash!";
-//             tdElm.style.backgroundColor = "orange";
-//       }
-//       if (tdElm.style.backgroundColor ==="green")
-//       {
-//             //tdElm.innerHTML = "Clash!";
-//             tdElm.style.backgroundColor = "orange";
-//       }
-//       else (tdElm.style.backgroundColor === "red") 
-//       {
-//         tdElm.style.backgroundColor = "white";
-//       } 
-
-
-
-
-
-
-
-
-
-
     window.onload = function(){
     
         var all = document.getElementsByTagName("td");
@@ -76,66 +9,19 @@
     function inputClickHandler(e){
         e = e||window.event;
         var tdElm = e.target||e.srcElement;
-        // console.log(tdElm.innerHTML);
+        // //console.log(tdElm.innerHTML);
         if(tdElm.innerHTML.length<2){
                if(tdElm.style.backgroundColor == 'red'){
             tdElm.style.backgroundColor = '#e8e8e8';
         } else {
             tdElm.style.background = 'red';
-            tdElm.innerHTML = 'red';
         }
         }
      
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if (tdElm.style.backgroundColor ==="red")
-//       {
-//             //tdElm.innerHTML = "Clash!";
-//             tdElm.style.backgroundColor = "orange";
-//       }
-//       if (tdElm.style.backgroundColor ==="green")
-//       {
-//             //tdElm.innerHTML = "Clash!";
-//             tdElm.style.backgroundColor = "orange";
-//       }
-//       else (tdElm.style.backgroundColor === "red") 
-//       {
-//         tdElm.style.backgroundColor = "white";
-//       } 
-
-
     var clubsAndSocs = {
-      Access: "Access",
-      Africa: "Africa",
-      AIESEC: "AIESEC",
+      C: "Coubs & Socs:",
       Aikido: "Aikido",
       Airsoft: "Airsoft",
       American_Football: "American Football",
@@ -205,9 +91,8 @@
       IESN: "IESN",
       Islamic: "Islamic",
       Israel: "Israel",
-      Japanese_Culture: "Japanese Culture",
       Judo: "Judo",
-      Kenpo_Karate: "KenpoKarate",
+      Kenpo_Karate: "Kenpo Karate",
       Kickboxing: "Kickboxing",
       Labour: "Labour",
       Ladies_GAA: "LadiesGAA",
@@ -216,7 +101,7 @@
       Law: "Law",
       Legion_of_Mary: "Legion of Mary",
       Literary_and_Debating: "Literary and Debating",
-      MarsFM: "MarsFM",
+      Mars_FM: "MarsFM",
       Mary: "Mary",
       Maths: "Maths",
       Mature: "Mature",
@@ -245,7 +130,7 @@
       Rovers: "Rovers",
       Rowing: "Rowing",
       Rugby: "Rugby",
-      Shotokan_Karate: "ShotokanKarate",
+      Shotokan_Karate: "Shotokan Karate",
       Sinn_Fein: "Sinn Féin",
       Snooker: "Snooker",
       Snowsports: "Snowsports",
@@ -255,13 +140,13 @@
       Strength_And_Fitness: "Strength And Fitness",
       Surf: "Surf",
       SVP: "SVP",
+      Trampoline: "Trampoline",
       TaekwonDo: "TaekwonDo",
       Tea: "Tea",
       The_Purpose_Movement: "The Purpose Movement",
       Game_Of_Thrones: "Game Of Thrones",
       Trad_Music: "Trad Music",
-      Trampoline: "Trampoline",
-      Ultimate_Frisbee: "UltimateFrisbee",
+      Ultimate_Frisbee: "Ultimate Frisbee",
       Volleyball: "Volleyball",
       Yoga: "Yoga",
       Young_Fine_Gael: "Young Fine Gael"
@@ -327,22 +212,19 @@
                 var endtime = child.val().end;
                 while (table.rows[i].cells[j].innerText >= starttime && table.rows[i].cells[j].innerText < endtime) {
                  
-                  if (table.rows[i].cells[day].style.background === "red") {
+                  if (table.rows[i].cells[day].style.background === "yellow" || table.rows[i].cells[day].style.background === "red") {
                     
                     table.rows[i].cells[day].style.background = "orange"
                     table.rows[i].cells[day].innerHTML = 'Clash!';
                     break;
 
-                  } else {
+                  }else {
                     table.rows[i].cells[day].style.background = "green";  
                     table.rows[i].cells[day].innerHTML = selValueL;
                     starttime++;
                     
                   }
 
-                  // console.log(table.rows[i].cells[day].innerHTML);
-                  console.log(table.rows[i].cells[day].style.background);
-                   
                 }
 
               }
@@ -358,7 +240,6 @@
         refR.once("value").then(function(snapshot) {
          
           snapshot.forEach(function(child) {
-            //console.log(child.val());
 
             var table = document.getElementById('mytable');
             for (var i = 2; i < table.rows.length; i++) {
@@ -370,7 +251,7 @@
                 var endtime = child.val().end;
                 while (table.rows[i].cells[j].innerText >= starttime && table.rows[i].cells[j].innerText < endtime) {
                   
-                  if (table.rows[i].cells[day].style.background === "green") {
+                  if (table.rows[i].cells[day].style.background === "green" || table.rows[i].cells[day].style.background === "red") {
                     
                     table.rows[i].cells[day].style.background = "orange"
                     table.rows[i].cells[day].innerHTML = 'Clash!';
@@ -393,11 +274,12 @@
       });
     });
 
-    function errData(err) {
-      console.log('Error!')
-      console.log(err);
-    }
-
      $('td').on('click',function(event){ 
-        console.log(this.innerHTML);
+        if(this.innerHTML.length > 0 && this.innerHTML.length < 90 && this.id != "header"  && this.id != "time" && this.id != "colabheader")
+        {
+            this.innerHTML = "Clash!";
+            this.style.background = "orange";
+        }
      });
+
+     //education, fianna_fail, GAA, Handball, IESN, Kenpo_Karate, Labour_Party, Red_Cross, Shotokan_Karate
