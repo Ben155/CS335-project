@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -9,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="clubcolabcss.css">
 
   <body>
-    <table class="options">
+    <table class="options"">
       <tr>
         <th>Club</th>
         <th></th>
@@ -20,15 +21,20 @@
           <select id="leftdropdown" placeholder="default"></select>
         </td>
 
+
         <td id="colabheader">
           <b>Colab with:</b>
         </td>
         <td id="num2" align="right">
-          <select id="rightdropdown" placeholder="default"></select></td>
+          <select id="rightdropdown" placeholder="default"></select>
+      </td>
       </tr>
 
+
     </table>
-    <table align="center" id="mytable">
+    <button class = "button" id="timebutton">Get times!</button>
+
+    <table width="1000" align="center" id="mytable">
       <tr>
         <td id="header" colspan="8">
           <h1>Maynooth Clubs & Socs Timetable</h1>
@@ -43,25 +49,11 @@
         <th>Wednesday</th>
         <th>Thursday</th>
         <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
       </tr>
 
 
       <tr>
-        <td>0900</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>0930</td>
-        <td></td>
-        <td></td>
+        <td id = "time">0900</td>
         <td></td>
         <td></td>
         <td></td>
@@ -69,19 +61,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>1000</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1030</td>
-        <td></td>
-        <td></td>
+        <td id = "time">0930</td>
         <td></td>
         <td></td>
         <td></td>
@@ -89,9 +69,23 @@
         <td></td>
       </tr>
       <tr>
-        <td>1100</td>
+        <td id = "time">1000</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id = "time">1030</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id = "time">1100</td>
         <td></td>
         <td></td>
         <td></td>
@@ -100,9 +94,140 @@
 
       </tr>
       <tr>
-        <td>1130</td>
+        <td id = "time">1130</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1200</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1230</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1300</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1330</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1400</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1430</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1500</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1530</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1600</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1630</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1700</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1730</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1800</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1830</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1900</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">1930</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">2000</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">2030</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      <tr>
+        <td id = "time">2100</td>
         <td></td>
         <td></td>
         <td></td>
@@ -110,19 +235,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>1200</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1230</td>
-        <td></td>
-        <td></td>
+        <td id = "time">2130</td>
         <td></td>
         <td></td>
         <td></td>
@@ -130,189 +243,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>1300</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1330</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1400</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1430</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1500</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1530</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1600</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1630</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1700</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1730</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1800</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1830</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1900</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1930</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2000</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2030</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2100</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2130</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>2200</td>
-        <td></td>
-        <td></td>
+        <td id = "time">2200</td>
         <td></td>
         <td></td>
         <td></td>
@@ -321,11 +252,12 @@
       </tr>
     </table>
 
-    <button id="timebutton">Button</button>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="clubcolabjs.js"></script>
   </body>
+
+
+
 
 
 
